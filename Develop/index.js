@@ -46,8 +46,8 @@ async function buildTeam(){
                         "Engineer",
                         "Intern",
                         "I don't want to add any more team members"
-                    ]
-                }
+                    ],
+                },
             ])
             .then(async function (response){
                 if(response.team_member === "Engineer"){
@@ -57,7 +57,7 @@ async function buildTeam(){
                             .then(function (engineerData){
                                 const engineer = new Engineer(
                                     engineerData.engineer_name,
-                                    engineerData.engineer.id,
+                                    engineerData.engineer_id,
                                     engineerData.engineer_email,
                                     engineerData.engineer_github
                                 );
@@ -71,7 +71,7 @@ async function buildTeam(){
                 else if (response.team_member === "Intern"){
                     try{
                         await inquirer
-                            prompt(questions.internQuestions)
+                            .prompt(questions.internQuestions)
                             .then(function(internData){
 
                                 const intern = new Intern(
@@ -108,7 +108,7 @@ function writeToFile(htmlData){
         console.log("Folder created");
     }
 
-    fs.writeFileSync(outputPath,htmlData,"utf-8")k;
+    fs.writeFileSync(outputPath,htmlData,"utf-8");
     console.log("HTML File generated!!!");
 }
 

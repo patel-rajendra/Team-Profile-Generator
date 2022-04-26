@@ -12,7 +12,7 @@ module.exports = {
             validate : function(value){
                 if (isNaN(value)) return "please enter valid ID";
                 else return true;
-            }
+            },
         },
         {
             type: "input",
@@ -26,8 +26,8 @@ module.exports = {
             validate :function(value){
                 if(isNaN(value)) return "Please enter valid office number";
                 else return true;
-            }
-        }
+            },
+        },
     ],
 
     engineerQuestions : [
@@ -43,7 +43,7 @@ module.exports = {
             validate: function(value){
                 if(isNaN(value)) return "Please enter valid ID";
                 else return true;
-            }
+            },
         },
         {
             type: "input",
@@ -54,7 +54,7 @@ module.exports = {
             type: "input",
             name: "engineer_github",
             message: "What is your engineer's github username?"
-        }
+        },
     ],
 
     internQuestions :[
@@ -70,12 +70,17 @@ module.exports = {
             validate: function(value){
                 if(isNaN(value)) return "Please enter valid ID";
                 else return true;
-            }
+            },
+        },
+        {
+            type: "input",
+            name: "intern_email",
+            message: "What is your intern's email?"
         },
         {
             type: "input",
             name: "intern_school",
             message: "What is your intern's school?",
         }
-    ]
+    ],
 };
