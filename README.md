@@ -12,7 +12,7 @@ Team profile generator is a node command line application that takes in informat
 * [License](#license)
 
 # Demo
-https://www.screencast.com/t/KVwvm397Q3D
+https://www.screencast.com/t/MB4hysB5
 
 ## User Story
 
